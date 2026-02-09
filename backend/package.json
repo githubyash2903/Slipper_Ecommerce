@@ -1,0 +1,42 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"scripts": {
+  "start": "ts-node-dev --respawn --transpile-only --watch src,server.ts server.ts",
+  "build": "tsc"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^5.2.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.3",
+    "path": "^0.12.7",
+    "pg": "^8.16.3",
+    "razorpay": "^2.9.6",
+    "zod": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.0.3",
+    "@types/pg": "^8.16.0",
+    "@types/uuid": "^10.0.0",
+    "dotenv": "^17.2.3",
+    "nodemon": "^3.1.11",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3",
+    "uuid": "^13.0.0"
+  }
+}
