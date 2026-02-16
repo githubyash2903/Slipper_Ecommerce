@@ -1,5 +1,4 @@
 import express from 'express';
-import 'express-async-errors';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import path from 'path';
@@ -18,10 +17,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
 // -------------------- ROUTES --------------------
 app.use('/api/v1/auth', authRouter);
-app.use('/api/v1/user',  userRouter);
+app.use('/api/v1/user', userRouter);
 app.use('/api/v1/admin', adminRouter);
 
 // Health Check
@@ -29,6 +27,7 @@ app.get('/api/health', (_req, res) => {
   res.json({ status: 'UP', timestamp: new Date().toISOString() });
 });
 
+// Error handler (this is enough in Express 5)
 app.use(errorHandler);
 
 async function startServer() {
@@ -37,10 +36,10 @@ async function startServer() {
 
     const PORT = Number(process.env.PORT) || 4000;
     app.listen(PORT, () => {
-      console.log(` Server running on port ${PORT}`);
+      console.log(`Server running on port ${PORT}`);
     });
   } catch (error) {
-    console.error(' Failed to start server', error);
+    console.error('Failed to start server', error);
     process.exit(1);
   }
 }
