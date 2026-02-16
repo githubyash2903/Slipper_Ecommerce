@@ -5,7 +5,6 @@
     "outDir": "./dist",
     "rootDir": ".",
 
-    /* Strictness */
     "strict": false,
     "noImplicitAny": false,
     "strictNullChecks": false,
@@ -13,16 +12,14 @@
     "strictBindCallApply": false,
     "strictPropertyInitialization": false,
 
-    /* Interop & resolution */
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
 
-    /* Build quality */
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src", "scripts"],
+  "include": ["server.ts", "src/**/*"],
   "exclude": ["node_modules"]
 }
