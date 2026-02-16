@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
 "scripts": {
-  "start": "ts-node-dev --respawn --transpile-only --watch src,server.ts server.ts",
+  "start": "ts-node-dev --respawn --transpile-only --watch src,server.ts server.ts, node dist/server.js",
+    "dev": "ts-node-dev server.ts",
   "build": "tsc"
 },
   "keywords": [],
