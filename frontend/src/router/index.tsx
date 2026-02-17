@@ -21,7 +21,6 @@ import AdminDashboard from "../pages/admin/AdminDashboard";
 import AdminProducts from "../pages/admin/AdminProducts";
 import AdminOrders from "../pages/admin/AdminOders";
 import AdminCustomers from "../pages/admin/AdminCustomer";
-import AdminSettings from "../pages/admin/AdminSettings";
 
 // Components & Guards
 import { RequireAuth } from "./guards/RequireAuth";
@@ -98,7 +97,6 @@ export const router = createBrowserRouter([
               { path: "products", element: <AdminProducts /> },
               { path: "orders", element: <AdminOrders /> },
               { path: "customers", element: <AdminCustomers /> },
-              { path: "settings", element: <AdminSettings /> },
             ],
           },
         ],
