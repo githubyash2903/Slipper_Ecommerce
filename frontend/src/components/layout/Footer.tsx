@@ -38,15 +38,13 @@ export function Footer() {
               <Link to="/products" className="text-background/70 hover:text-primary transition-colors text-sm">
                 All Products
               </Link>
-              <Link to="/products?category=sneakers" className="text-background/70 hover:text-primary transition-colors text-sm">
-                Sneakers
+              <Link to="/products?category=slippers" className="text-background/70 hover:text-primary transition-colors text-sm">
+                Slippers
               </Link>
-              <Link to="/products?category=formal" className="text-background/70 hover:text-primary transition-colors text-sm">
-                Formal Shoes
+              <Link to="/products?category=flip-flops" className="text-background/70 hover:text-primary transition-colors text-sm">
+                Flip Flops
               </Link>
-              <Link to="/wholesale" className="text-background/70 hover:text-primary transition-colors text-sm">
-                Wholesale
-              </Link>
+             
             </nav>
           </div>
 
@@ -64,9 +62,6 @@ export function Footer() {
               </Link>
               <Link to="/faq" className="text-background/70 hover:text-primary transition-colors text-sm">
                 FAQ
-              </Link>
-              <Link to="/size-guide" className="text-background/70 hover:text-primary transition-colors text-sm">
-                Size Guide
               </Link>
             </nav>
           </div>
@@ -94,17 +89,6 @@ export function Footer() {
           <p>&copy; {new Date().getFullYear()} FootWear. All rights reserved.</p>
 
           <div className="flex flex-wrap items-center gap-16">
-            <div className="flex items-center  cursor-pointer">
-              <img
-                src={dmvLogo}
-                alt="DMV Coretech Logo"
-                className="h-9 w-9 object-contain"
-              />
-              <p>
-                Powered by <span className="text-[#f97415] pl-1">DMV Coretech</span>
-              </p>
-            </div>
-
             <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
           </div>
