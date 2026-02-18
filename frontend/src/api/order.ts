@@ -2,7 +2,7 @@ import { authClient } from './axios';
 
 import axios from 'axios';
 
-const API_URL = 'http://localhost:4000/api/v1';
+const API_URL = 'https://slipper-ecommerce.onrender.com/api/v1';
 
 export const placeOrderAPI = async (orderData: any) => {
   const response = await authClient.post('/user/order', orderData);

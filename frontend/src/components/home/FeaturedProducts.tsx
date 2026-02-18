@@ -6,11 +6,13 @@ import { usePublicProducts } from '@/hooks/useProducts';
 
 export function FeaturedProducts() {
   const { data: products, isLoading } = usePublicProducts();
-
+ console.log("Raw Products Data:", products);
 
   const featured = (products || [])
     .filter((p: any) => p.is_new || p.is_sale || p.isNew || p.isSale)
     .slice(0, 4);
+ 
+console.log("Filtered Featured:", featured); 
 
   return (
     <section className="py-20 bg-secondary/30">

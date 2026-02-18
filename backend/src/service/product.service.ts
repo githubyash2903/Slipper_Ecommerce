@@ -15,7 +15,7 @@ export async function createProduct(data: any) {
     [
       name, description, price, wholesalePrice || 0, bulkThreshold || 0, stock,
       category, gender, image, images || [], sizes || [], colors || [],
-      isNew || false, isSale || false, salePercent || 0
+      isNew || true, isSale || false, salePercent || 0
     ]
   );
   return rows[0];

@@ -286,6 +286,7 @@ export default function AdminProducts() {
                         <SelectItem value="flip-flops">Flip-Flops</SelectItem>
                         <SelectItem value="sandals slippers">Sandals Slippers</SelectItem>
                         <SelectItem value="casual wear">Shoes</SelectItem>
+                        <SelectItem value="casual wear">formal</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

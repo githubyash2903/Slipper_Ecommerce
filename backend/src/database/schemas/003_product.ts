@@ -4,7 +4,7 @@ export const productsTable: Migration = {
   id: 3,
   name: 'create_products_table',
   up: `
-    -- 1. ⚠️ Purani table ko delete karein (Taki naya structure aa sake)
+    -- 1.  Purani table ko delete karein (Taki naya structure aa sake)
     DROP TABLE IF EXISTS products CASCADE;
 
     -- 2. Extension ensure karein
