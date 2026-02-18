@@ -13,7 +13,7 @@ import { employeesTable } from "./schemas/007_employee";
 import { paymentsTable } from "./schemas/008_payment";
 import { stockManagementTable } from "./schemas/009_stockManagment";
 import { addRazorpayIdToOrders } from "./schemas/010_add_razorpay_id_to_orders";
-import { fixAllMissingColumns } from "./schemas/011_fixMissingColumns";
+import { fixMissingOrderColumns } from "./schemas/011_fixMissingColumns";
 
 export class DatabaseInitializer {
   static async initialize() {
@@ -45,8 +45,8 @@ export class DatabaseInitializer {
       paymentsTable,
       stockManagementTable,
       addRazorpayIdToOrders,
-      fixAllMissingColumns,
-      
+      fixMissingOrderColumns,
+    
       
     ]);
     
