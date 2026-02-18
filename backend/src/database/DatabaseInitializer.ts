@@ -12,7 +12,8 @@ import { wishlistTable } from "./schemas/006_wishlist";
 import { employeesTable } from "./schemas/007_employee";
 import { paymentsTable } from "./schemas/008_payment";
 import { stockManagementTable } from "./schemas/009_stockManagment";
-import { add_razorpay_id_and_fix_taxes } from "./schemas/010_add_razorpay_id_to_orders";
+import { addRazorpayIdToOrders } from "./schemas/010_add_razorpay_id_to_orders";
+import { fixMissingTaxes } from "./schemas/011_fixMissingTaxes";
 
 export class DatabaseInitializer {
   static async initialize() {
@@ -43,7 +44,8 @@ export class DatabaseInitializer {
       employeesTable,
       paymentsTable,
       stockManagementTable,
-      add_razorpay_id_and_fix_taxes,
+      addRazorpayIdToOrders,
+      fixMissingTaxes,
       
       
     ]);
