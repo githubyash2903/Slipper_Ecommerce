@@ -1,6 +1,6 @@
 import { Migration } from '../migrate';
 
-export const addRazorpayIdToOrders: Migration = {
+export const add_razorpay_id_and_fix_taxes: Migration = {
   id: 10, 
   name: 'add_razorpay_id_and_fix_taxes', // Naam thoda change kiya taaki yaad rahe
   up: `

@@ -12,7 +12,7 @@ import { wishlistTable } from "./schemas/006_wishlist";
 import { employeesTable } from "./schemas/007_employee";
 import { paymentsTable } from "./schemas/008_payment";
 import { stockManagementTable } from "./schemas/009_stockManagment";
-import { addRazorpayIdToOrders } from "./schemas/010_add_razorpay_id_to_orders";
+import { add_razorpay_id_and_fix_taxes } from "./schemas/010_add_razorpay_id_to_orders";
 
 export class DatabaseInitializer {
   static async initialize() {
@@ -43,7 +43,7 @@ export class DatabaseInitializer {
       employeesTable,
       paymentsTable,
       stockManagementTable,
-      addRazorpayIdToOrders,
+      add_razorpay_id_and_fix_taxes,
       
       
     ]);
