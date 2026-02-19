@@ -2,9 +2,10 @@ import pool from '../database/db';
 import { AppError } from '../utils/errors';
 
 export async function createProduct(data: any) {
+  // Fix 1: 'image' ki jagah 'image_url' nikaalein
   const {
     name, description, price, wholesalePrice, bulkThreshold, stock,
-    category, gender, image, images, sizes, colors, isNew, isSale, salePercent
+    category, gender, image_url, images, sizes, colors, isNew, isSale, salePercent
   } = data;
 
   const { rows } = await pool.query(
@@ -14,11 +15,13 @@ export async function createProduct(data: any) {
     RETURNING *`,
     [
       name, description, price, wholesalePrice || 0, bulkThreshold || 0, stock,
-      category, gender, image, images || [], sizes || [], colors || [],
+      category, gender, image_url, images || [], sizes || [], colors || [], // Fix 2: Yahan image_url use karein
       isNew || true, isSale || false, salePercent || 0
     ]
   );
-  return rows[0];
+  
+  // Bonus Fix: Response ko frontend friendly banane ke liye 'mapToFrontend' ka use karein
+  return mapToFrontend(rows[0]); 
 }
 
 export async function getAllProducts() {
